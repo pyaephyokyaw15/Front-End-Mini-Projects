@@ -1,0 +1,15 @@
+.flexbox {
+    display:flex;
+    flex-direction:row;
+    justify-content:center; 
+    align-items:center;
+    }
+
+.item {
+   
+    width: 10vw;
+    height: 10vw;
+    background-color: RGBA(252, 102, 32, 1);
+    border-radius: 100%;
+    }
+

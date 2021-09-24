@@ -1,0 +1,88 @@
+body{
+    background-color: black;
+}
+
+
+h1{
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-size: 60px;
+    width: 40vh;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+p{
+    color: white;
+    font-family: Helvetica, sans-serif;
+    width: 40vh;
+    text-align: right;
+}
+
+
+.main-wraper{
+    
+
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    bottom: -5vh;
+          
+}
+
+.keys{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50vh;
+    
+}
+
+
+
+
+.key{
+    width: 9vh;
+    height: 9vh;
+    margin: 1vh;
+    border-radius: 5vh;
+    cursor: pointer;
+    background-color: #333333;
+    font-size: 25px;
+    border : none;
+    color: white;
+}
+
+.key:active{
+    background: #444444;
+}
+
+.keys > .key:nth-child(17) {
+    width: 20vh;
+    height: 8vh;
+}
+
+.keys > .key:nth-child(-n+3) {
+    background: #A6A6A6;
+}
+
+.keys > .key:nth-child(-n+3):active {
+    background: #b6b6b6;
+}
+
+.keys > .key:nth-child(4n) {
+    background: #FE9500;
+}
+
+.keys > .key:nth-child(4n):active{
+    background: #d48312;
+}
+.keys > .key:last-child{
+    background: #FE9500;
+}
+
+.keys > .key:last-child:active{
+    background: #d48312;
+}
