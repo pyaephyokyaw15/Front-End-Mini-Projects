@@ -1,0 +1,149 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(120deg, #f6d365, #fda085);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+header, .menu-bar {
+    min-height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    font-size: 1.5rem;
+}
+
+
+.menu-bar input{
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    background-color: white;
+    width: 50%;
+    
+}
+
+.menu-bar button {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    color: #d88771;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-bar button:hover {
+    background-color:#d88771;
+    color: white;
+}
+
+.select {
+    position: relative;
+    overflow: hidden; 
+    margin-left: 3%;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    background: #ff6f47;
+    top: 0;
+    right: 0;
+    padding: 0.8rem 0.5rem;  
+    pointer-events: none;
+    transition: all 0.3s ease;    
+}
+
+.select:hover::after {
+    background-color: white;
+    color: #ff6f47;
+    
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: #ff6f47;
+    cursor: pointer;
+    padding: 0.8rem 0.5rem;    
+}
+
+
+
+
+
+
+
+
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size:  1.5 rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.todo li{
+    flex: 1;
+}
+
+
+.trash-btn, .complete-btn {
+    background: #ff6447;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    
+}
+
+.complete-btn {
+    background-color: rgb(73, 204, 73);
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+

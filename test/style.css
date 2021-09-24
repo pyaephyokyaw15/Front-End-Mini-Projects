@@ -1,15 +1,25 @@
-.flexbox {
-    display:flex;
-    flex-direction:row;
-    justify-content:center; 
-    align-items:center;
-    }
+.main-wraper{
+    display: flex;
+    height: 50vh   
+}
 
-.item {
+#div-1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+  
+}
+
+#div-2{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: relative;
+}
+
+p{
+    position: absolute;
+    left: 0px;
    
-    width: 10vw;
-    height: 10vw;
-    background-color: RGBA(252, 102, 32, 1);
-    border-radius: 100%;
-    }
-
+    color: black;
+}
