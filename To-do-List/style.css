@@ -11,63 +11,63 @@ body {
     min-height: 100vh;
 }
 
-header, .menu-bar {
-    min-height: 15vh;
+header {
+    min-height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-header {
     font-size: 1.5rem;
 }
 
+header h1 {
+    color: white;
+}
+.menu {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
-.menu-bar input{
-    padding: 0.5rem;
-    font-size: 1.5rem;
-    border: none;
-    background-color: white;
+.add-task {
+    display: flex;
     width: 50%;
+    margin-bottom: 15px;
     
 }
 
-.menu-bar button {
+.todo-input {
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    border: none;
+    background-color: white;
+    width: 100%;
+    outline: none;      
+}
+
+.todo-button {
     padding: 0.5rem;
     font-size: 1.5rem;
     border: none;
-    color: #d88771;
+    color: #ff6f47;
     cursor: pointer;
+    background-color: white;
     transition: all 0.3s ease;
 }
 
-.menu-bar button:hover {
-    background-color:#d88771;
+.todo-button:hover {
+    background-color:#ff6f47;
     color: white;
 }
 
 .select {
     position: relative;
-    overflow: hidden; 
-    margin-left: 3%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;       
 }
 
-.select::after {
-    content: '\25BC';
-    position: absolute;
-    background: #ff6f47;
-    top: 0;
-    right: 0;
-    padding: 0.8rem 0.5rem;  
-    pointer-events: none;
-    transition: all 0.3s ease;    
-}
-
-.select:hover::after {
-    background-color: white;
-    color: #ff6f47;
-    
-}
 
 select {
     -webkit-appearance: none;
@@ -77,26 +77,42 @@ select {
     border: none;
     color: #ff6f47;
     cursor: pointer;
-    padding: 0.8rem 0.5rem;    
+    padding: 0.5rem 0.5rem;
+    font-size: 18px;
+    width: 150px;
+}
+
+
+.select::after{
+    content: '\25BC';
+    position: absolute;
+    background: #ff6f47;
+    padding: 0.5rem 0.5rem;  
+    transition: all 0.3s ease;
+    pointer-events: none;
+    font-size: 14px;    
+}
+
+.select:hover::after {
+    background-color: white;
+    color: #ff6f47;    
 }
 
 
 
-
-
-
-
-
-
 .todo-container {
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .todo-list {
-    min-width: 30%;
-    list-style: none;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .todo {
@@ -106,31 +122,51 @@ select {
     font-size:  1.5 rem;
     display: flex;
     align-items: center;
-    transition: all 0.3s ease;
+    transition: opacity 0.3s;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;    
 }
 
-.todo li{
+
+
+.todo-item{
     flex: 1;
+    font-size: 20px;
 }
 
 
 .trash-btn, .complete-btn {
-    background: #ff6447;
+    background-color: rgb(73, 204, 73);
     color: white;
     border: none;
     padding: 1rem;
     cursor: pointer;
-    font-size: 1rem;
-    
+    font-size: 1rem; 
 }
 
-.complete-btn {
-    background-color: rgb(73, 204, 73);
+.trash-btn {
+    background: #ff6447;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.complete-btn:hover {
+    background-color: rgb(78, 252, 78);
+}
+
+.trash-btn:hover {
+    background-color: #f74525;
 }
 
 .todo-item {
     padding: 0rem 0.5rem;
+    overflow: auto;   
 }
+
+.todo-item::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */     
+}
+
 
 .fa-trash, .fa-check {
     pointer-events: none;
@@ -138,12 +174,29 @@ select {
 
 .completed {
     text-decoration: line-through;
-    opacity: 0.8;
+    opacity: 0.5;
 }
 
 .fall {
-    transform: translateY(8rem) rotateZ(20deg);
     opacity: 0;
 }
 
 
+@media only screen and (max-width: 600px) {
+    .add-task {
+        width: 90%;
+    }
+
+    .todo-list {
+        width: 90%;
+    }
+
+    .select {
+        width: 90%;
+    }
+
+    .todo-container {
+        margin-top: 30px;
+    }
+    
+}

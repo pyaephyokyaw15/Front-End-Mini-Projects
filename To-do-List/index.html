@@ -9,17 +9,21 @@
     <link rel="icon" href="./images/logo.png"  type="image/x-icon">
     <title>To-do-List</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.10.2/Sortable.min.js"></script>
 </head>
 <body>
     <header>
         <h1>Todo List</h1>
     </header>
 
-        <div class='menu-bar'>
-            <input type="text" class="todo-input">
-            <button class='todo-button'>
-                <i class="fas fa-plus-square"></i>
-            </button>
+        <div class='menu'>
+            <div class='add-task'>
+                <input type="text" class="todo-input">
+                <button class='todo-button'>
+                    <i class="fas fa-plus-square"></i>
+                </button>
+            </div>
+            
             <div class="select">
                 <select name="todos" class="filter-todo">
                     <option value="all">All</option>
@@ -31,8 +35,16 @@
     
     
     <div class="todo-container">
-        <ul class="todo-list"></ul>
+        <div class="todo-list"></div>
     </div>
+
+    
+    <script>
+        const dragArea = document.querySelector('.todo-list');
+        new Sortable(dragArea, {
+            animation: 300
+        });
+    </script>
 
     <script src='./script.js'></script>
 </body>
