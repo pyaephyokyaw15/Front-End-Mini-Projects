@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="icon" href="./images/logo.png"  type="image/x-icon">
     <title>To-do-List</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.10.2/Sortable.min.js"></script>
 </head>
 <body>
@@ -16,36 +16,27 @@
         <h1>Todo List</h1>
     </header>
 
-        <div class='menu'>
-            <div class='add-task'>
-                <input type="text" class="todo-input">
-                <button class='todo-button'>
-                    <i class="fas fa-plus-square"></i>
-                </button>
-            </div>
-            
-            <div class="select">
-                <select name="todos" class="filter-todo">
-                    <option value="all">All</option>
-                    <option value="completed">Completed</option>
-                    <option value="uncompleted">Uncompleted</option>
-                </select>
-            </div>
+    <div class='menu'>
+        <div class='add-task'>
+            <input type="text" class="todo-input">
+            <button class='todo-button'>
+                <i class="fas fa-plus-square"></i>
+            </button>
         </div>
-    
+        
+        <div class="select">
+            <select name="todos" class="filter-todo">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="uncompleted">Uncompleted</option>
+            </select>
+        </div>
+    </div>
     
     <div class="todo-container">
         <div class="todo-list"></div>
     </div>
 
-    
-    <script>
-        const dragArea = document.querySelector('.todo-list');
-        new Sortable(dragArea, {
-            animation: 300
-        });
-    </script>
-
-    <script src='./script.js'></script>
+    <script src='js/script.js'></script>
 </body>
 </html>
