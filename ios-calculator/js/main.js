@@ -2,37 +2,74 @@
 let mainScreen = document.querySelector('#main-screen');
 let smallScreen = document.querySelector('#small-screen');
 let operators = ['+', '-', '*', '/', '%'];
+let numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 let keys = document.querySelectorAll('.key');
 let answer;
 
 
 // Functions
-function smallDisplay(key) {
+function manipulateKey(key) {
     if (key === '=') {
-        answer = eval(smallScreen.innerText);
-        smallScreen.innerText = answer;
+        showAnswer();
     } else if (key === 'AC') {
-        smallScreen.innerText = '';
+        clearScreen();
     } else if (key === 'C') {
-        smallScreen.innerText = smallScreen.innerText.slice(0, -1);
-    } else {
-        smallScreen.innerText += key;
+        deleteKey(); 
+    } else if (numbers.includes(key)) {
+        numberKey(key);
+    } else if (operators.includes(key)) {
+        operatorKey(key);
+    }       
+}
+
+function showAnswer () {
+    answer = eval(smallScreen.innerText);
+    smallScreen.innerText = answer;
+    mainScreen.innerText = answer;
+}
+
+function clearScreen() {
+    smallScreen.innerText = '0';
+    mainScreen.innerText = '0';
+}
+
+function deleteKey() {
+    smallScreen.innerText = smallScreen.innerText.slice(0, -1);
+    // If no more key, set 0
+    if (smallScreen.innerText.length === 0) {
+        smallScreen.innerText = '0';
+    }
+
+    mainScreen.innerText = mainScreen.innerText.slice(0, -1);
+    // If no more key, set 0
+    if (mainScreen.innerText.length === 0) {
+        mainScreen.innerText = '0';
     }
 }
 
-function mainDisplay(key) {
-    console.log(mainScreen.innerText);
-    if ('0123456789'.includes(key)) {
-        mainScreen.innerText += key;
-    } else if (key === 'C') {
-        mainScreen.innerText = mainScreen.innerText.slice(0, -1);
-    } else if (key === '=') {
-        mainScreen.innerText = answer;
-    } else {
+function numberKey (key) {
+    // remove first 0.
+    if (smallScreen.innerText === '0' ) {
+        smallScreen.innerText = '';
+    }
+    smallScreen.innerText += key;
+
+    // remove first 0.
+    if (mainScreen.innerText === '0' ) {
         mainScreen.innerText = '';
     }
+    mainScreen.innerText += key;
+}
 
+function operatorKey(key) {
+    lastKey = smallScreen.innerText.slice(-1);
+    // Avoid operator duplication
+    if (!operators.includes(lastKey)) {
+        smallScreen.innerText += key;
+    }
 
+    // Set 0 on main screen when press operator key.
+    mainScreen.innerText = '0';
 }
 
 
@@ -42,89 +79,15 @@ keys.forEach(function (element) {
     element.addEventListener('click', function () {
         //console.log(element);
         let key = element.innerText;
-        console.log(key);
-
-        // replace operator to meet with eval function
-        if (key === '&#247;') {
+        // replace with js operators
+        if (key === '÷') {
             key = '/';
         } else if (key === 'x') {
             key = '*';
+        } else if (key === '−') {
+            key = '-';
         }
-
-        
-        smallDisplay(key);
-        mainDisplay(key);    
+    
+        manipulateKey(key); 
     });    
 });
-
-
-
-
-
-
-
-
-// // show expression for both screen
-// function showEexpression(x){
-    
-//     // remove zero
-//     if (equation.innerHTML == 0 && !operators.includes(x)){
-//         equation.innerHTML = x;
-//         myDisplay.innerHTML = x;
-//         return ;
-//     }
-
-    
-//     // avoid operator duplication
-//     let lastkey = equation.innerHTML[equation.innerHTML.length-1];
-//     console.log(lastkey);
-//     if (!( operators.includes(x) && operators.includes(lastkey))){
-//         equation.innerHTML += x;
-//     }
-    
-//     // when operator is pressed, clear screen.
-//     if (!(operators.includes(x))) {
-//         if (myDisplay.innerHTML == 0){
-//             myDisplay.innerHTML = x;
-//         }else{
-//         myDisplay.innerHTML += x;
-//         }
-        
-//     }else{
-//         myDisplay.innerHTML = 0;
-//     }
-    
-// }
-
-
-// // calaulation
-// function calculate(){
-//         try{
-//             myDisplay.innerHTML = eval(eval(equation.innerHTML).toFixed(4)).toLocaleString();;
-//         }catch (error) {
-//             alert("Your Input is wrong");
-//         }
-// }
-
-// // clear both screen
-// function clear_screen(){
-//     equation.innerHTML = 0;
-//     myDisplay.innerHTML = 0;
-// }
-
-// // delete both screen
-// function delete_screen(){
-
-//     // remove last number
-//     equation.innerHTML = equation.innerHTML.slice(0, -1);
-//     myDisplay.innerHTML = myDisplay.innerHTML.slice(0, -1);
-
-//     // if no number left, put zero
-//     if (equation.innerHTML.length === 0){
-//         equation.innerHTML = 0;
-//         myDisplay.innerHTML = 0;
-//     }
-// }
-
-
-

@@ -1,9 +1,11 @@
-$('button').click(
-    function () {
-        $('button').hide(3000);
-        $('p').toggle(3000);
-        $('div').toggle(3000);
-        
+let testElement = document.querySelector('.test');
+test = testElement.innerText;
 
-    }
-);
+console.log(testElement);
+console.log(test); 
+
+
+
+testElement.innerText = 'wro'
+test = 'world';
+console.log(test); 
