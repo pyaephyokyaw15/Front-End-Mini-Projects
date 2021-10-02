@@ -17,6 +17,7 @@ https://chat-to-do-list.netlify.app/
 - filter Taks
 - Sort tasks
 - Save data in your browser
+- Compatible with any device
 
   
 ## Authors
