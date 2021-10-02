@@ -26,11 +26,22 @@ function displayTask(task) {
     const todoDiv = document.createElement('div');
     todoDiv.classList.add('todo');
 
-    // Create div
+    // Drag Handle
+    const dragHandle = document.createElement('div');
+    dragHandle.classList.add('drag-handle');
+    dragHandle.innerHTML = '<i class="fas fa-grip-vertical fa-lg"></i>';
+    todoDiv.appendChild(dragHandle);
+
+    // Task
     const newTodo = document.createElement('div');
     newTodo.classList.add('todo-item');
     newTodo.innerText = task;
     todoDiv.appendChild(newTodo);
+
+    // barrier between task and buttons
+    const space = document.createElement('div');
+    space.classList.add('space');
+    todoDiv.appendChild(space);
 
     // Complete Button
     const completedButton = document.createElement('button');
@@ -127,9 +138,9 @@ filterOption.addEventListener('click', event => {
     });
 });
 
-
 // Sort Items
 const dragArea = document.querySelector('.todo-list');
 new Sortable(dragArea, {
-    animation: 300
+    animation: 300,
+    handle:'.drag-handle',
 });

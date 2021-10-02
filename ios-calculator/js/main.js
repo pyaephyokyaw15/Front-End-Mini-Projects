@@ -9,26 +9,27 @@ let answer;
 // Functions
 function smallDisplay(key) {
     if (key === '=') {
-        answer = eval(smallScreen.value);
-        smallScreen.value = answer;
+        answer = eval(smallScreen.innerText);
+        smallScreen.innerText = answer;
     } else if (key === 'AC') {
-        smallScreen.value = '';
+        smallScreen.innerText = '';
     } else if (key === 'C') {
-        smallScreen.value = smallScreen.value.slice(0, -1);
+        smallScreen.innerText = smallScreen.innerText.slice(0, -1);
     } else {
-        smallScreen.value += key;
+        smallScreen.innerText += key;
     }
 }
 
 function mainDisplay(key) {
+    console.log(mainScreen.innerText);
     if ('0123456789'.includes(key)) {
-        mainScreen.value += key;
+        mainScreen.innerText += key;
     } else if (key === 'C') {
-        mainScreen.value = mainScreen.value.slice(0, -1);
+        mainScreen.innerText = mainScreen.innerText.slice(0, -1);
     } else if (key === '=') {
-        mainScreen.value = answer;
+        mainScreen.innerText = answer;
     } else {
-        mainScreen.value = '';
+        mainScreen.innerText = '';
     }
 
 

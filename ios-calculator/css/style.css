@@ -20,23 +20,26 @@ body{
 }
 
 
-
 #main-screen,
 #small-screen {
     background-color: inherit;
     color: white;
     font-size: 60px;
-    width: 100%;
+    width: 42vh;
+    height: 10vh;
     text-align: right;
     margin-bottom: 10px;
     border: none;
     outline: none;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    cursor: pointer;
 }
 
 #small-screen {
     border-top: 1vh;
-    font-size: 20px;    
+    font-size: 20px;
+    height: 5vh;    
 }
 
 
@@ -91,4 +94,13 @@ body{
 
 .keys > .key:last-child:active{
     background: #d48312;
+}
+
+::-webkit-scrollbar{
+    height:5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgb(59, 27, 6);
+    border-radius: 10px;
 }

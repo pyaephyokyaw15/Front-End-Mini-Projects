@@ -118,11 +118,20 @@ select {
     cursor: pointer;    
 }
 
+.drag-handle {
+    padding: 0px 20px;
+
+}
+
 .todo-item{
     flex: 1;
     font-size: 20px;
-    padding: 0rem 0.5rem;
     overflow: auto;
+}
+
+.space {
+    width: 10px;
+    height: 10px;
 }
 
 .trash-btn, .complete-btn {
@@ -192,3 +201,4 @@ select {
     background: rgb(219, 219, 202);
     border-radius: 10px;
 }
+
