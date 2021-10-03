@@ -36,7 +36,6 @@ textarea {
     flex-direction: row;   
 }
 
-
 button {
     padding: 1rem;
     color: black;
@@ -49,7 +48,6 @@ button {
     align-items: center; 
     border-radius: 5px;
 }
-
 
 button:hover {
     background-color:rgb(204, 248, 213);
