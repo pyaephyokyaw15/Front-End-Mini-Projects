@@ -76,6 +76,7 @@ header {
     font-size: 24px; 
     font-weight: bold;  
     overflow-wrap: break-word;
+    overflow-y: hidden;
 }
 
 #add-note {
@@ -90,4 +91,13 @@ header {
     cursor: pointer;
     background-color: transparent;
     color: white;
+}
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgb(219, 219, 202);
+    border-radius: 10px;
 }
