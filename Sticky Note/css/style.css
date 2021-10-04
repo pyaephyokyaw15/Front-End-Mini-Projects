@@ -28,7 +28,7 @@ header {
     position: fixed;
     height: 100vh;
     width: 100vw;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     z-index: 1;

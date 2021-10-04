@@ -1,9 +1,42 @@
-.new {
-    position: fixed;
-    top: 0;
-    bottom: 0%;
+.container {
     width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.card-container {
+    width: 200px;
+    height: 300px;
+    
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.card-container:hover .card{
+    transform: rotateY(180deg);
+}
+
+.card div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.card .front {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.card .back {
+    background: darkgoldenrod;
+    color: white;
+    transform: rotateY(180deg);
+}
+
