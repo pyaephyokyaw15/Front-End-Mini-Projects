@@ -7,13 +7,15 @@ const filterOption = document.querySelector('.filter-todo');
 const todos = JSON.parse(localStorage.getItem("todos")) || []; 
 
 
-// ---------------- Functions --------------------
+// ------------------- Functions --------------------------
 // Save Local Storage
 function saveLocalTodos(todo){
     todos.push(todo);
     localStorage.setItem('todos', JSON.stringify(todos));
 }
 
+
+// Remove from Local Storage
 function removeLocalTodos(todo){
     const todoTask = todo.children[0].innerText;
     console.log(todos.indexOf(todoTask));
@@ -21,6 +23,8 @@ function removeLocalTodos(todo){
     localStorage.setItem('todos', JSON.stringify(todos));
 }
 
+
+// Display Task
 function displayTask(task) {
     // Create div
     const todoDiv = document.createElement('div');
@@ -57,12 +61,14 @@ function displayTask(task) {
     todoList.appendChild(todoDiv); // Append todo list
 }
 
+
+// get todos in local storage
 function getTodos() {
     todos.forEach(displayTask);
 }
 
 
-
+// --------------------------- Start ---------------------------
 // Display todo Lists from local storage
 document.addEventListener('DOMContentLoaded', getTodos);
 
@@ -78,7 +84,6 @@ todoButton.addEventListener('click', () => {
     // Clear todo input value
     todoInput.value = '';
 });
-
 
 // remove or complete task
 todoList.addEventListener('click', event => {
@@ -106,7 +111,6 @@ todoList.addEventListener('click', event => {
         todo.classList.toggle('completed');
     }
 });
-
 
 // Filter
 filterOption.addEventListener('click', event => {

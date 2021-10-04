@@ -188,14 +188,12 @@ select {
 
     .todo-container {
         margin-top: 30px;
-    }
-    
+    }  
 }
 
 ::-webkit-scrollbar{
     height:5px;
 }
-
 
 ::-webkit-scrollbar-thumb{
     background: rgb(219, 219, 202);
