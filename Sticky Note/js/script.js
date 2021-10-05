@@ -1,10 +1,10 @@
 // Variables
-var random_margin = ["0px", "5px", "10px", "15px", "20px", "25px", "30px"];
-var random_colors = ["#c2ff3d","#ff3de8","#3dc2ff","#04e022","#bc83e6","#ebb328"];
-var random_degree = ["rotate(2deg)", "rotate(-2deg)", "rotate(4deg)", "rotate(-4deg)", "rotate(8deg)", "rotate(-8deg)"];
-var index = 0;
+let random_margin = ["0px", "5px", "10px", "15px", "20px", "25px", "30px"];
+let random_colors = ["#c2ff3d","#ff3de8","#3dc2ff","#04e022","#bc83e6","#ebb328"];
+let random_degree = ["rotate(2deg)", "rotate(-2deg)", "rotate(4deg)", "rotate(-4deg)", "rotate(8deg)", "rotate(-8deg)"];
+let index = 0;
 // Get saved notes from local storage. If there is nothing, create an empty array.
-const savedNotes = JSON.parse(localStorage.getItem("savedNotes")) || []; 
+let savedNotes = JSON.parse(localStorage.getItem("savedNotes")) || []; 
 
 
 // Selectors
@@ -64,7 +64,7 @@ function createNote(myNote) {
 // first show notes saved in local storage.
 savedNotes.forEach(createNote);
 
-// Pop up text aera when click addd button
+// Pop up text aera when click add button
 addBtn.addEventListener('click', () => {
     newNoteContainer.style.display = 'flex';
 });
