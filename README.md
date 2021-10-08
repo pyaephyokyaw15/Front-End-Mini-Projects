@@ -2,7 +2,7 @@
 ---
 
 
-Font-End Mini Projects while learning front-end development.
+Font-End Mini Projects using vanilla javascript while learning front-end development.
 
 [Website](https://pyaephyokyaw15.github.io/Front-End-Mini-Projects/)
 
