@@ -1,10 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
 #pages {
     position: absolute;
-    right: 50px;
+    right: 5px;
     top: 30px;    
 }
 
-a{
+#advanced_logo {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 100px;
+}
+
+a {
     display: inline-block;
     margin-right: 30px;
     text-decoration: none;
@@ -12,23 +32,15 @@ a{
     color: #434040;
 }
 
-
-#form{
-    margin-left: 20%;
-    margin-top: 100px;
-    width: 60%;
-
-    /*
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    width: 40%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); */
+#form {
+    width: 95%;
+    max-width: 600px;
 }
 
 #search{
     outline:none;
+    margin-top: 100px;
+    padding: 20px;
     border-style: solid;
     border-width: 1px;
     border-color: #dfe1e5;
@@ -40,19 +52,22 @@ a{
     font-size: 20px;    
 }
 
-
 .submit{
     display: inline-block;
     padding: 10px;
     margin-right: 10px;
-    background-color: #f8f9fa;
-    border: none;
+    margin-top: 30px;
+    background-color: #ffffff;
+    border: 1px solid rgb(182, 182, 182);
+    cursor: pointer;
+}
+
+.submit:hover {
+    color: blue;
 }
 
 
 #logo{
-    display: block;
-    margin: auto;
     margin-top: 100px;
 }
 
@@ -69,32 +84,49 @@ a:hover{
     font-size: 20px;
 }
 
-
-table{
-    border-spacing: 1em 1em;
+form h3 {
+    margin: 20px 0px 20px 50px;
+    margin-bottom: 30px;
 }
 
-td input{
-    width: 500px;
-    height: 25px;
+.fields {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin-left: 50px;
+    width: 80vw;
 }
 
-#advanced_submit{
-    float: right;
-    width: 130px;
+.row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.col2 {
+    max-width: 500px;
+    width: 90vw;
+    padding: 5px;
+    outline:none;
+}
+
+#advanced_submit {
+    padding: 10px;
     background-color: dodgerblue;
     color: cornsilk;
     border-color: dodgerblue;
     border-style: solid;
-    border-radius: 5px;  
+    border-radius: 5px; 
+    align-self: flex-end;
 }
 
-#title{
+#title {
     color:red;
-    margin-left: 30px;
+    margin-left: 50px;
+    margin-bottom: 20px;
 }
 
-
-#form div{
-    text-align: center;
-}

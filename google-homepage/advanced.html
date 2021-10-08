@@ -1,56 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
-        <title>Advanced Search</title>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Adanvced Search</title>
         <link rel="stylesheet" href="styles.css">
     </head>
-
     <body>
+            <div id='pages'>
+                <a href="index.html" >Goolge Search</a>
+            </div>
+            <img id='advanced_logo' alt="Google" src="images/google.png">
+            <h2 id='title'>Find out more</h2>
+            <hr>
 
-        <div id='pages'>
-            <a href="index.html" >Goolge Search</a>
-        </div>
-
-        <br><br><br>
-
-        <img id='advanced_logo' alt="Google" src="images/google.png" width="150" height="50">
-
-        <h2 id='title'>Find out more</h2>
-        <hr>
-        
-
-        <form id='advanced_form' action="https://google.com/search">
-
-            <table>
-                <tr>
-                    <td><h3>Search Pages...</h3></td>
-                </tr>
-                <tr>
-                    <td>all these words:</td>
-                    <td><input name="as_q"></td>
-                </tr>
-                <tr>
-                    <td>this exact word or phrase:</td>
-                    <td><input name="as_epq"></td>
-                </tr>
-                <tr>
-                    <td>any of these words:</td>
-                    <td><input name="as_oq"></td>
-                </tr>
-                <tr>
-                    <td>none of these words:</td>
-                    <td><input name="as_eq"></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input id='advanced_submit' type="submit"  value="Advanced Search"></td>
-                </tr>
-            </table>
-            
-        </form>   
+            <form id='advanced_form' action="https://google.com/search">
+                <h3>Search Pages...</h3>
+                <div class='fields'>
+                    <div class='row'>
+                        <label class='col1'>all these words:</label>
+                        <input class='col2' name="as_q">
+                    </div>
+                    <div class='row'>
+                        <label class='col1'>this exact word or phrase:</label>
+                        <input class='col2' name="as_epq">
+                    </div>
+                    <div class='row'>
+                        <label class='col1'>any of these words:</label>
+                        <input class='col2' name="as_oq">
+                    </div>
+                    <div class='row'>
+                        <label class='col1'>none of these words:</label>
+                        <input class='col2' name="as_eq">
+                    </div>
+                    <input id='advanced_submit' type="submit"  value="Advanced Search"> 
+                </div>
+                    
+            </form>   
+      
      
     </body>
 
