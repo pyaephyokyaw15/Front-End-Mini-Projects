@@ -11,7 +11,6 @@
     height: 100vh;
 }
 
-
 #pages {
     position: absolute;
     right: 5px;
@@ -33,7 +32,7 @@ a {
 }
 
 #form {
-    width: 95%;
+    width: 90vw;
     max-width: 600px;
 }
 
@@ -130,3 +129,6 @@ form h3 {
     margin-bottom: 20px;
 }
 
+.buttons {
+    text-align: center;
+}
