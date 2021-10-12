@@ -1,7 +1,7 @@
 
 # Case Converter
 
-This is a simple case converter site using vanilla javascript.
+This is a simple case converter app using vanilla javascript.
 
 
 ## Demo
