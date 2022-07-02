@@ -8,6 +8,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
     height: 100vh;
 }
 
@@ -29,6 +30,7 @@ a {
     text-decoration: none;
     font-family: arial,sans-serif;
     color: #434040;
+    
 }
 
 #form {
@@ -38,7 +40,7 @@ a {
 
 #search{
     outline:none;
-    margin-top: 100px;
+    margin-top: 50px;
     padding: 20px;
     border-style: solid;
     border-width: 1px;
@@ -56,18 +58,22 @@ a {
     padding: 10px;
     margin-right: 10px;
     margin-top: 30px;
-    background-color: #ffffff;
-    border: 1px solid rgb(182, 182, 182);
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
     cursor: pointer;
+    color: rgb(34, 34, 34);
 }
 
 .submit:hover {
-    color: blue;
+    background-color: rgb(248, 248, 248);
+    border-color: rgb(198, 198, 198);
+    color: rgb(0, 0, 0);
 }
 
 
 #logo{
-    margin-top: 100px;
+    width: 272px;
+    height: 92px;
 }
 
 #advanced_logo{
@@ -127,8 +133,13 @@ form h3 {
     color:red;
     margin-left: 50px;
     margin-bottom: 20px;
+    margin-
 }
 
 .buttons {
     text-align: center;
+}
+
+.buttons {
+    t
 }
