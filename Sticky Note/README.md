@@ -1,7 +1,7 @@
 
 # Sticky Note
 
-This  is a sticky note app  using Vanilla Javascript.
+Sticky Note app  using Vanilla Javascript.
 
 
 ## Demo
@@ -13,8 +13,8 @@ https://chat-sticky-note.netlify.app/
 
 - Add note
 - Remove note
-- Save data in your browser
-- Compatible with any device
+- Save data in your browser(local storage)
+- Compatible with any device(responsive)
 
 
   
