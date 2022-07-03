@@ -1,7 +1,7 @@
 
 # Todo List
 
-This is a simple To-Do list app with Vanilla JavaScript.
+Simple To-Do List app with Vanilla JavaScript.
 
 
 ## Demo
@@ -16,8 +16,8 @@ https://chat-to-do-list.netlify.app/
 - Mark as completed task
 - filter Taks
 - Sort tasks
-- Save data in your browser
-- Compatible with any device
+- Save data in your browser(local strorage)
+- Compatible with any device(responsive)
 
   
 ## Authors

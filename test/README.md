@@ -1,7 +1,7 @@
 
 # Test
 
-This folder is created for testing bucks of code when developing projcets.
+This folder is created for testing bucks of code when developing projects.
 
 
 ## Authors

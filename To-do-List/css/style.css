@@ -70,6 +70,7 @@ select {
     outline: none;
     border: none;
     color: #ff6f47;
+    background-color: white;
     cursor: pointer;
     padding: 0.5rem 0.5rem;
     font-size: 18px;
