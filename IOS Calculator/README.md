@@ -1,7 +1,7 @@
 
 # IOS Calculator
 
-This is a ios calculator with Vanilla JavaScript.
+IOS Calculator App using Vanilla JavaScript.
 
 
 ## Demo
@@ -15,7 +15,7 @@ https://chat-ios-calculator.netlify.app/
 - Avoid Operator Duplication
 - Scroll bar for heavy calculations
 - Consider Edge Cases
-- Compatible with any device
+- Compatible with any device(responsive)
 
 
   
